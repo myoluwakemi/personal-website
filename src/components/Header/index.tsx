@@ -22,6 +22,14 @@ const Header = () => {
   const toggleSidebar = () => {
     setShowSideBar(!showSidebar);
   };
+  const handleClickScroll = () => {
+    toggleSidebar()
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  
+  };
   return (
     <HeaderNav>
       <div className="inner-header">
@@ -51,7 +59,7 @@ const Header = () => {
             whileTap={{ scale: 0.9 }}
           ></motion.span>
         </div>
-        {showSidebar && createPortal(<Sidebar />, document.body)}
+        {showSidebar && createPortal(<Sidebar onClick={ handleClickScroll} />, document.body)}
       </div>
     </HeaderNav>
   );

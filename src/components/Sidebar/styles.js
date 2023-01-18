@@ -27,6 +27,8 @@ export const SidebarWrapper = styled(motion.aside)`
         display: flex;
         flex-direction: column;
         padding-top: 1.5rem;
+        list-style: none;
+        padding-left: 0;
         a {
           text-decoration: none;
           color: #fff;
