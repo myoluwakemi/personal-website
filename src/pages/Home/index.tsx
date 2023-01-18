@@ -8,7 +8,8 @@ import {
 } from "./styles";
 
 const Home = () => {
-  const handleClickScroll = () => {
+  const handleClickScroll = (e: any) => {
+    e.preventDefault();
     const element = document.getElementById("projects");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -34,7 +35,9 @@ const Home = () => {
             Interfaces, integrating REST APIs, management and scaling of web
             applications.
           </p>
-          <a onClick={handleClickScroll} >Projects</a>
+          <a href="/" onClick={handleClickScroll}>
+            Projects
+          </a>
         </div>
       </div>
       <div className="projects" id="projects">
@@ -51,7 +54,13 @@ const Home = () => {
             <Line className="line"></Line>
             <div className="project-url">
               <span>01</span>
-              <a href="#">Myk - ecommerce</a>
+              <a
+                href="https://myk-ecommerce.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Myk - ecommerce
+              </a>
             </div>
           </ProjectRow>
           <ProjectRow>
@@ -63,7 +72,13 @@ const Home = () => {
             <Line className="line"></Line>
             <div className="project-url">
               <span>02</span>
-              <a href="#">Enum</a>
+              <a
+                href="https://enum.africa/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Enum
+              </a>
             </div>
           </ProjectRow>
           <ProjectRow>
@@ -76,7 +91,13 @@ const Home = () => {
             <div className="project-url">
               <span>03</span>
 
-              <a href="#">AttestNG</a>
+              <a
+                href="https://attestapp.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                AttestNG
+              </a>
             </div>
           </ProjectRow>
         </ProjectOption>

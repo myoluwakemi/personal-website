@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { SidebarWrapper } from "./styles";
 
 type Props = {
-  onClick?: ()=> void;
-
+  onClick?: () => void;
 };
 
-const Sidebar = ({onClick}: Props) => {
-  
+const Sidebar = ({ onClick }: Props) => {
   return (
     <SidebarWrapper>
       <div className="sidebar-content">
@@ -24,7 +22,13 @@ const Sidebar = ({onClick}: Props) => {
               <Link to="/">About</Link>
             </li>
             <li>
-              <Link to="/">Resume</Link>
+              <a
+                href="https://docs.google.com/document/d/1v3zBDgAPl0t28jkK-X_XIfwmW7F81Qf0g8Y2_8Wlv-I/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
             </li>
             <li>
               {" "}
@@ -36,17 +40,29 @@ const Sidebar = ({onClick}: Props) => {
           <span className="sidebar-header">Socials</span>
           <ul className="social-options">
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/oluwakemiyusuf/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Linkedin
               </a>
             </li>
             <li>
-              <a  href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/myoluwakemi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Github
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/myoluwakemi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Twitter
               </a>
             </li>
