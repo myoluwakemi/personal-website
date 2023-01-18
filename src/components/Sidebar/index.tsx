@@ -28,7 +28,7 @@ const Sidebar = ({onClick}: Props) => {
             </li>
             <li>
               {" "}
-              <Link to="/">Contact</Link>
+              <a href="mailto:yusufoluwakemi39@gmail.com">Contact</a>
             </li>
           </ul>
         </div>
