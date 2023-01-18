@@ -7,7 +7,6 @@ const Layout = ()=> {
     return(
         <Wrapper>
             <Header/>
-
             <Outlet/>
         </Wrapper>
     )

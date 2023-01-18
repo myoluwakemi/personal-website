@@ -7,7 +7,7 @@ export const HeaderNav = styled.header`
   left: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid #fff;
   z-index: 10;
   line-height: 28px;
