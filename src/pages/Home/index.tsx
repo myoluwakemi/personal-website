@@ -1,5 +1,11 @@
 import React from "react";
-import { HomeWrapper, ProjectOption } from "./styles";
+import {
+  HomeWrapper,
+  Line,
+  ProjectOption,
+  ProjectRow,
+  ProjectRowDetails,
+} from "./styles";
 
 const Home = () => (
   <HomeWrapper>
@@ -26,22 +32,21 @@ const Home = () => (
     </div>
     <div className="projects">
       <h1>Projects</h1>
-      <ProjectOption className="project-options">
-        <div className="row">
-          <div className="project-details">
+      <ProjectOption>
+        <ProjectRow>
+          <ProjectRowDetails>
             <span>Ecommerce platform</span>
-            <span>
-              Framework:
-              <span>React, Bootstrap, ContextApi, Sass, firebase,i18next </span>
+            <span className="framework">
+             React,ContextApi,Sass, firebase,i18next 
             </span>
             <span className="year">2022-2023</span>
-          </div>
-          <div className="line"></div>
-          <div>
+          </ProjectRowDetails>
+          <Line className="line"></Line>
+          <div className="project-url">
             <span>01</span>
             <a href="#">Myk - ecommerce</a>
           </div>
-        </div>
+        </ProjectRow>
       </ProjectOption>
     </div>
   </HomeWrapper>

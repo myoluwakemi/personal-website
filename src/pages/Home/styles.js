@@ -46,12 +46,12 @@ export const HomeWrapper = styled(motion.div)`
       text-align: center;
       font-size: 50px;
       letter-spacing: 3px;
+      margin-bottom: 2rem;
     }
   }
 `;
 export const ProjectOption = styled(motion.div)`
   margin-top: 1.5rem;
-  max-width: 1400px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -59,6 +59,47 @@ export const ProjectOption = styled(motion.div)`
 `;
 export const ProjectRow = styled(motion.div)`
   display: flex;
-  justify-content: center;
-  align-item: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  padding: 2.5rem 0;
+  height:240px;
+  border-top:1px solid rgba(255,255, 255, 0.5);
+   border-bottom: 1px solid rgba(255,255, 255, 0.5);
+  .project-url{
+    display: flex;
+    flex-direction: column;
+    span{
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+    a{
+        color: #ffff;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+  }
+  
+  
+  j
+`;
+
+export const ProjectRowDetails = styled(motion.div)`
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 1.6em;
+  span {
+    font-weight: lighter;
+  }
+`;
+
+export const Line = styled(motion.div)`
+  background: #fff;
+  width: 20%;
+  height: 1px;
+  opacity: 60%;
 `;
