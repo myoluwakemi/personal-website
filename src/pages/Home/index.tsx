@@ -47,6 +47,34 @@ const Home = () => (
             <a href="#">Myk - ecommerce</a>
           </div>
         </ProjectRow>
+          <ProjectRow>
+          <ProjectRowDetails>
+            <span>Recruitment Platform</span>
+            <span className="framework">
+             Vuejs
+            </span>
+            <span className="year">2020-2021</span>
+          </ProjectRowDetails>
+          <Line className="line"></Line>
+          <div className="project-url">
+            <span>02</span>
+            <a href="#">Enum</a>
+          </div>
+        </ProjectRow>
+          <ProjectRow>
+          <ProjectRowDetails>
+            <span>Academic Verification</span>
+            <span className="framework">
+             Vuejs, Vuetify
+            </span>
+            <span className="year">2021</span>
+          </ProjectRowDetails>
+          <Line className="line"></Line>
+          <div className="project-url">
+            <span>03</span>
+            <a href="#">AttestNG</a>
+          </div>
+        </ProjectRow>
       </ProjectOption>
     </div>
   </HomeWrapper>
