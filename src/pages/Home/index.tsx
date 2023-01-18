@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from "framer-motion"
 import {
   HomeWrapper,
   Line,
@@ -18,9 +19,9 @@ const Home = () => {
   return (
     <HomeWrapper>
       <div className="banner">
-        <div className="oluwakemi">
+        <motion.div className="oluwakemi">
           <h1>Oluwakemi</h1>
-        </div>
+        </motion.div>
         <div className="oluwakemi-intro">
           <p>
             {" "}
@@ -100,6 +101,7 @@ const Home = () => {
               </a>
             </div>
           </ProjectRow>
+          
         </ProjectOption>
       </div>
     </HomeWrapper>
