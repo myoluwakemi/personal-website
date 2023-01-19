@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 export const SidebarWrapper = styled(motion.aside)`
   position: fixed;
-  top: 8.5%;
+  top: 0;
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   height: 100vh;
+  transition: all 0.5s ease;
   .sidebar-content {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -3,12 +3,24 @@ import { Link } from "react-router-dom";
 import { SidebarWrapper } from "./styles";
 
 type Props = {
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler;
+  show: Boolean;
 };
 
-const Sidebar = ({ onClick }: Props) => {
+const Sidebar = ({ onClick, show }: Props) => {
+  const variantA = {
+    open: { opacity: 1, y: "5%" },
+    closed: { opacity: 0, y: '100%', transition: {
+      y: { stiffness: 1000 }
+    } },
+  };
   return (
-    <SidebarWrapper>
+    <SidebarWrapper
+      animate={show ? "open" : "closed"}
+      variants={variantA}
+      transition={{ duration: 0.5 }}
+      
+    >
       <div className="sidebar-content">
         <div className="sides-div">
           <span className="sidebar-header">Navigation</span>

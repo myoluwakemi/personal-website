@@ -23,12 +23,11 @@ const Header = () => {
     setShowSideBar(!showSidebar);
   };
   const handleClickScroll = () => {
-    toggleSidebar()
+    toggleSidebar();
     const element = document.getElementById("projects");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-  
   };
   return (
     <HeaderNav>
@@ -59,7 +58,11 @@ const Header = () => {
             whileTap={{ scale: 0.9 }}
           ></motion.span>
         </div>
-        {showSidebar && createPortal(<Sidebar onClick={ handleClickScroll} />, document.body)}
+        {showSidebar &&
+          createPortal(
+            <Sidebar show={showSidebar} onClick={handleClickScroll} />,
+            document.body
+          )}
       </div>
     </HeaderNav>
   );
