@@ -37,7 +37,11 @@ const Home = () => {
     }
   };
   return (
-    <HomeWrapper initial={{ opacity: 0 }} animate={{opacity: 1}} exit={{opacity: 0}}>
+    <HomeWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <motion.div className="banner">
         <motion.div variants={firstName} className="oluwakemi">
           <motion.h1 variants={letter}>Oluwakemi</motion.h1>

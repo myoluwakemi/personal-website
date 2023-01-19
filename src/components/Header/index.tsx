@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Sidebar from "../Sidebar";
 import { createPortal } from "react-dom";
@@ -33,16 +34,9 @@ const Header = () => {
     <HeaderNav>
       <div className="inner-header">
         <motion.div className="logo">
-          <motion.h4
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 1 },
-            }}
-            whileTap={{ opacity: 0, x: "-50%" }}
-            transition={{ ease: [0.17, 0.67, 0.83, 0.67] }}
-          >
+          <Link to='/'>
             KEMI
-          </motion.h4>
+          </Link>
         </motion.div>
         <div className="date-container">
           {currDate} {getTime}

@@ -21,9 +21,11 @@ export const HeaderNav = styled.header`
     .logo {
       border-right: 1px solid #fff;
       padding: 1rem;
-      h4 {
-       font-family: 'Londrina Solid', cursive;
+      a {
+        font-family: "Londrina Solid", cursive;
         font-weight: 400;
+        color: #fff;
+        text-decoration: none;
       }
     }
     .toggle-button {
