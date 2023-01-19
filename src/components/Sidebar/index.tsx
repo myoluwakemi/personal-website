@@ -31,7 +31,7 @@ const Sidebar = ({ onClick, show }: Props) => {
               </a>
             </li>
             <li>
-              <Link to="/">About</Link>
+              <Link onClick={onClick} to="about">About</Link>
             </li>
             <li>
               <a

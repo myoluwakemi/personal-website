@@ -1,12 +1,8 @@
-import { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ErrorBoundary } from "react-error-boundary";
 
 import "./App.css";
-
-import Layout from "./Layout";
-
-const Home = lazy(()=> import('./pages/Home'))
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   const ErrorFallback = () => {
@@ -15,13 +11,7 @@ function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Router>
-        <Suspense fallback="Loading">
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-            </Route>
-          </Routes>
-        </Suspense>
+        <AnimatedRoutes />
       </Router>
     </ErrorBoundary>
   );

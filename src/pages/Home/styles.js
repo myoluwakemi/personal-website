@@ -42,7 +42,7 @@ export const HomeWrapper = styled(motion.div)`
   }
   .projects {
     color: #fff;
-    @media (min-width: 476px) and (max-width: 589px){
+    @media (min-width: 476px) and (max-width: 589px) {
       margin-top: 6.5rem;
     }
 
@@ -68,14 +68,13 @@ export const HomeWrapper = styled(motion.div)`
         }
       }
     }
-    .projects{
-      h1{
+    .projects {
+      h1 {
         font-size: 30px;
       }
     }
-    
   }
-  
+
   @media (min-width: 992px) {
     .banner {
       grid-template-columns: 1fr 1fr;
@@ -148,7 +147,7 @@ export const Line = styled(motion.div)`
   width: 20%;
   height: 1px;
   opacity: 60%;
-   @media (max-width: 992px) {
+  @media (max-width: 992px) {
     order: 2;
-   }
+  }
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import {
   HomeWrapper,
   Line,
@@ -7,6 +7,26 @@ import {
   ProjectRow,
   ProjectRowDetails,
 } from "./styles";
+
+const firstName = {
+  animate: {
+    y: 0,
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.04,
+      staggerDirection: -1,
+    },
+  },
+};
+const letter = {
+  initial: {
+    y: 400,
+  },
+  animate: {
+    y: 0,
+    transition: { duration: 1 },
+  },
+};
 
 const Home = () => {
   const handleClickScroll = (e: any) => {
@@ -17,10 +37,10 @@ const Home = () => {
     }
   };
   return (
-    <HomeWrapper>
-      <div className="banner">
-        <motion.div className="oluwakemi">
-          <h1>Oluwakemi</h1>
+    <HomeWrapper initial={{ opacity: 0 }} animate={{opacity: 1}} exit={{opacity: 0}}>
+      <motion.div className="banner">
+        <motion.div variants={firstName} className="oluwakemi">
+          <motion.h1 variants={letter}>Oluwakemi</motion.h1>
         </motion.div>
         <div className="oluwakemi-intro">
           <p>
@@ -40,7 +60,7 @@ const Home = () => {
             Projects
           </a>
         </div>
-      </div>
+      </motion.div>
       <div className="projects" id="projects">
         <h1>Projects</h1>
         <ProjectOption>
@@ -101,7 +121,6 @@ const Home = () => {
               </a>
             </div>
           </ProjectRow>
-          
         </ProjectOption>
       </div>
     </HomeWrapper>
