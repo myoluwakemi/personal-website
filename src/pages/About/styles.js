@@ -6,14 +6,13 @@ export const AboutWrapper = styled(motion.div)`
   margin-top: 4rem;
   color: #fff;
   .background-profile {
-   
     display: grid;
     gap: 75px;
     grid-template-columns: 2fr 1fr;
-   
+
     .personal-img {
-         overflow: hidden;
-          height: 400px;
+      overflow: hidden;
+      height: 400px;
       img {
         height: 600px;
         width: 100%;
@@ -24,15 +23,15 @@ export const AboutWrapper = styled(motion.div)`
   @media (max-width: 476px) {
     padding: 4rem 1rem 0 1rem;
   }
-  @media(max-width: 767px){
-   .background-profile{
-     grid-template-columns: 1fr;
-   }
+  @media (max-width: 767px) {
+    .background-profile {
+      grid-template-columns: 1fr;
+    }
   }
-  @media(min-width: 768px) and (max-width: 1070px){
-     .background-profile{
-     grid-template-columns: 1fr 1fr;
-   }
+  @media (min-width: 768px) and (max-width: 1070px) {
+    .background-profile {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 `;
 export const SectionParagraph = styled(motion.p)`
@@ -88,6 +87,10 @@ export const ExperienceRow = styled(motion.div)`
     letter-spacing: 0.01em;
     line-height: 28px;
   }
+   @media(max-width: 660px){
+    flex-direction:column;
+    text-align: center;
+   }
 `;
 export const Year = styled(motion.div)`
   display: flex;
@@ -101,11 +104,15 @@ export const Year = styled(motion.div)`
   span {
     font-weight: bolder;
     font-size: 20px;
+    letter-spacing: 0.01em;
   }
   .line {
     background: #fff;
     height: 1px;
     width: 80%;
     opacity: 60%;
+  }
+  @media (max-width: 660px) {
+    box-shadow: unset;
   }
 `;

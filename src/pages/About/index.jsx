@@ -1,4 +1,5 @@
 import PersonalImage from "../../assets/img/oluwakemi.jpg";
+import { motion } from "framer-motion";
 import {
   AboutWrapper,
   ExperienceRow,
@@ -8,6 +9,8 @@ import {
   SectionTitle,
   Year,
 } from "./styles";
+
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.5, 0.9] };
 const About = () => {
   return (
     <AboutWrapper
@@ -27,9 +30,30 @@ const About = () => {
             located in Nigeria.
           </SectionParagraph>
         </div>
-        <div className="personal-img">
-          <img src={PersonalImage} alt="me" />
-        </div>
+        <motion.div
+          initial={{
+            y: "-50%",
+            width: 500,
+            height: 650,
+          }}
+          animate={{
+            y: "0",
+            width: "100%",
+            height: window.innerWidth > 1440 ? 400 : 400,
+            transition: { duration: 2, ...transition },
+          }}
+          className="personal-img"
+        >
+          <motion.img
+            initial={{ scale: 1.1 }}
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 1 },
+            }}
+            src={PersonalImage}
+            alt="me"
+          />
+        </motion.div>
       </div>
       <ExperienceWrapper>
         <SectionTitle>Experiences</SectionTitle>
