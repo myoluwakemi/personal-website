@@ -47,11 +47,12 @@ const About = () => {
           <SectionTitle>Background</SectionTitle>
           <SectionParagraph>
             As a frontend Engineer. I started my professional career in Nigeria
-            before extending as Romania(remote). I have had the opportunity to
-            work on various projects using different javascripts frameworks. My
-            endeavors with several intercultural team mates provided me with all
-            the knowledge necessary to hone my problem solving skills. Currently
+            before extending to Romania(remote). I have had the opportunity to
+            work on various projects using different JavaScripts frameworks. My
+            endeavours with several intercultural teammates provided me with all
+            the knowledge necessary to hone my problem-solving skills. Currently
             located in Nigeria.
+
           </SectionParagraph>
         </div>
         <motion.div

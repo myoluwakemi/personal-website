@@ -85,8 +85,8 @@ const Home = () => {
           <p>
             {" "}
             Front Engineer that Poised, passionate professional, and
-            product-oriented, with 3+ years of experience working Javascript,
-            ReactJS, VueJs, NextJs in a variety of fast-paced, dynamic, and
+            product-oriented, with 3+ years of experience working in Javascript,
+            ReactJS, VueJs, and NextJs in a variety of fast-paced, dynamic, and
             ever-changing settings.{" "}
           </p>
 
@@ -120,7 +120,9 @@ const Home = () => {
                   {Object.values(project.frameworks).map((framework, index) => {
                     return (
                       <span key={index} className="framework">
-                        {framework}{(Object.values(project.frameworks).length -1 !== index) && ', '}
+                        {framework}
+                        {Object.values(project.frameworks).length - 1 !==
+                          index && ", "}
                       </span>
                     );
                   })}
