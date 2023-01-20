@@ -5,9 +5,10 @@ import { SidebarWrapper } from "./styles";
 type Props = {
   onClose?: React.MouseEventHandler;
   show: Boolean;
+  toProject: React.MouseEventHandler
 };
 
-const Sidebar = ({ onClose, show }: Props) => {
+const Sidebar = ({ onClose, show, toProject}: Props) => {
   const variantA = {
     open: { opacity: 1, y: "5%" },
     closed: { opacity: 0, y: '100%', transition: {
@@ -25,7 +26,7 @@ const Sidebar = ({ onClose, show }: Props) => {
         <div className="sides-div">
           <span className="sidebar-header">Navigation</span>
           <ul className="navigation">
-            <li onClick={onClose}>
+            <li onClick={toProject}>
               <a onClick={(e) => e.preventDefault()} href="/">
                 Projects
               </a>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Sidebar from "../Sidebar";
 import { createPortal } from "react-dom";
@@ -8,6 +8,8 @@ import { HeaderNav } from "./styles";
 
 
 const Header = () => {
+
+  const navigate = useNavigate()
   const [showSidebar, setShowSideBar] = useState(false);
   const variantA = {
     open: { opacity: 0, x: "-100%" },
@@ -27,10 +29,11 @@ const Header = () => {
   };
   const handleClickScroll = () => {
     toggleSidebar();
-    // const element = document.getElementById("projects");
-    // if (element) {
-    //   element.scrollIntoView({ behavior: "smooth" });
-    // }
+    navigate('/#projects')
+    const element = document.getElementById("projects");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
   return (
     <HeaderNav>
@@ -56,7 +59,7 @@ const Header = () => {
         </div>
         {showSidebar &&
           createPortal(
-            <Sidebar show={showSidebar} onClose={handleClickScroll} />,
+            <Sidebar show={showSidebar} onClose={toggleSidebar} toProject={handleClickScroll} />,
             document.body
           )}
       </div>

@@ -10,6 +10,30 @@ import {
   Year,
 } from "./styles";
 
+const experiences = [
+  {
+    year_from: "July 2022",
+    year_to: "Oct 2022",
+    company_name: "SEOmonitor",
+    location: "Romania",
+    position: "Front Engineer",
+  },
+  {
+    year_from: "Oct 2021",
+    year_to: "June 2022",
+    company_name: "D'accubin",
+    location: "Lagos, Nigeria",
+    position: "Front Engineer",
+  },
+  {
+    year_from: "July 2019",
+    year_to: "Sept 2021",
+    company_name: "Semicolon Africa",
+    location: "Lagos, Nigera",
+    position: "Software Engineer",
+  },
+];
+
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.5, 0.9] };
 const About = () => {
   return (
@@ -61,34 +85,38 @@ const About = () => {
           An Overview of my academic and professional work
         </SectionParagraph>
         <Experiences>
-          <ExperienceRow
-            initial={{ opacity: 0, x: "-100%", background: "#000" }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 4 }}
-            whileHover={{
-              background: "#efefef",
-              color: "#000",
-              borderRadius: "6px",
-            }}
-          >
-            <Year>
-              <span>July 2022</span>
-              <motion.div
-                initial={{ background: "#fff" }}
-                whileHover={{
-                  background: "#000",
-                }}
-                transition={{ duration: 4 }}
-                className="line"
-              ></motion.div>
-              <span>Oct 2022</span>
-            </Year>
-            <div className="other-details">
-              <h4 className="name of institution">Seomonitor</h4>
-              <span className="location">Romania</span>
-              <span className="position">Frontend Engineer</span>
-            </div>
-          </ExperienceRow>
+          {experiences.map((experience) => (
+            <ExperienceRow
+              initial={{ opacity: 0, x: "-100%", background: "#000" }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 4 }}
+              whileHover={{
+                background: "#efefef",
+                color: "#000",
+                borderRadius: "6px",
+              }}
+            >
+              <Year>
+                <span>{experience.year_from}</span>
+                <motion.div
+                  initial={{ background: "#fff" }}
+                  whileHover={{
+                    background: "#000",
+                  }}
+                  transition={{ duration: 4 }}
+                  className="line"
+                ></motion.div>
+                <span>{experience.year_to}</span>
+              </Year>
+              <div className="other-details">
+                <h4 className="name of institution">
+                  {experience.company_name}
+                </h4>
+                <span className="location">{experience.location}</span>
+                <span className="position">{experience.position}</span>
+              </div>
+            </ExperienceRow>
+          ))}
         </Experiences>
       </ExperienceWrapper>
     </AboutWrapper>
