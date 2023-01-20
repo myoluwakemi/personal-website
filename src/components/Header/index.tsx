@@ -29,7 +29,7 @@ const Header = () => {
   };
   const handleClickScroll = () => {
     toggleSidebar();
-    navigate('/#projects')
+    navigate('/')
     const element = document.getElementById("projects");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

@@ -1,4 +1,4 @@
-import PersonalImage from "../../assets/img/oluwakemi.jpg";
+
 import { motion } from "framer-motion";
 import {
   AboutWrapper,
@@ -74,7 +74,8 @@ const About = () => {
               scale: 1.2,
               transition: { duration: 1 },
             }}
-            src={PersonalImage}
+           srcSet='assets/oluwakemi.jpg'
+            src='assets/oluwakemi.jpg'
             alt="me"
           />
         </motion.div>

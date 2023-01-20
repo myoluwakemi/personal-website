@@ -8,7 +8,7 @@ const Layout = lazy(() => import("../../Layout"));
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <Suspense fallback="Loading">
+    <Suspense fallback={<div>Loading</div>}>
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
