@@ -9,6 +9,33 @@ import {
   ProjectRowDetails,
 } from "./styles";
 
+const projects = [
+  {
+    id: 1,
+    details: "Ecommerce platform",
+    frameworks: ["React", "ContextApi", "Sass", "firebase", "i18next"],
+    year: "2022-2023",
+    url: "https://myk-ecommerce.netlify.app/",
+    urlName: "Myk - ecommerce",
+  },
+  {
+    id: 2,
+    details: "Recruitment Platform",
+    frameworks: ["Vuejs", "vuex"],
+    year: "2020-2021",
+    url: "https://enum.africa/",
+    urlName: "Enum",
+  },
+  {
+    id: 3,
+    details: "Academic Verification",
+    frameworks: ["Vuejs", "Vuetify"],
+    year: "2021",
+    url: '"https://attestapp.netlify.app/',
+    urlName: "AttestNG",
+  },
+];
+
 const rowVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 4 } },
   hidden: { opacity: 0, y: "-100%" },
@@ -76,71 +103,40 @@ const Home = () => {
       <div className="projects" id="projects">
         <h1>Projects</h1>
         <ProjectOption>
-          <ProjectRow
-          ref={ref}
-            initial="hidden"
-           animate={controls}
-           variants={rowVariant}
-            transition={{ duration: 4 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ProjectRowDetails>
-              <span>Ecommerce platform</span>
-              <span className="framework">
-                React,ContextApi,Sass, firebase,i18next
-              </span>
-              <span className="year">2022-2023</span>
-            </ProjectRowDetails>
-            <Line className="line"></Line>
-            <div className="project-url">
-              <span>01</span>
-              <a
-                href="https://myk-ecommerce.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Myk - ecommerce
-              </a>
-            </div>
-          </ProjectRow>
-          <ProjectRow>
-            <ProjectRowDetails>
-              <span>Recruitment Platform</span>
-              <span className="framework">Vuejs</span>
-              <span className="year">2020-2021</span>
-            </ProjectRowDetails>
-            <Line className="line"></Line>
-            <div className="project-url">
-              <span>02</span>
-              <a
-                href="https://enum.africa/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Enum
-              </a>
-            </div>
-          </ProjectRow>
-          <ProjectRow>
-            <ProjectRowDetails>
-              <span>Academic Verification</span>
-              <span className="framework">Vuejs, Vuetify</span>
-              <span className="year">2021</span>
-            </ProjectRowDetails>
-            <Line className="line"></Line>
-            <div className="project-url">
-              <span>03</span>
+          {projects.map((project, index) => (
+            <ProjectRow
+              key={index}
+              ref={ref}
+              initial="hidden"
+              animate={controls}
+              variants={rowVariant}
+              transition={{ duration: 4 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ProjectRowDetails>
+                <span>{project.details}</span>
+                <div className="frameworks">
+                  {Object.values(project.frameworks).map((framework, index) => {
+                    return (
+                      <span key={index} className="framework">
+                        {framework}{(Object.values(project.frameworks).length -1 !== index) && ', '}
+                      </span>
+                    );
+                  })}
+                </div>
 
-              <a
-                href="https://attestapp.netlify.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                AttestNG
-              </a>
-            </div>
-          </ProjectRow>
+                <span className="year">{project.year}</span>
+              </ProjectRowDetails>
+              <Line className="line"></Line>
+              <div className="project-url">
+                <span>0{project.id}</span>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  {project.urlName}
+                </a>
+              </div>
+            </ProjectRow>
+          ))}
         </ProjectOption>
       </div>
     </HomeWrapper>

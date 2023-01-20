@@ -96,7 +96,6 @@ export const ProjectRow = styled(motion.div)`
   padding: 2.5rem 0;
   height: 240px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   .project-url {
     display: flex;
     flex-direction: column;
