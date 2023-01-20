@@ -8,27 +8,14 @@ import {
   ProjectRowDetails,
 } from "./styles";
 
-const firstName = {
-  animate: {
-    y: 0,
-    transition: {
-      delayChildren: 0.6,
-      staggerChildren: 0.04,
-      staggerDirection: -1,
-    },
-  },
-};
-const letter = {
-  initial: {
-    y: 400,
-  },
-  animate: {
-    y: 0,
-    transition: { duration: 1 },
-  },
-};
-
 const Home = () => {
+  
+  //  const container = document.querySelector("body") as HTMLElement;
+
+  
+
+  
+
   const handleClickScroll = (e: any) => {
     e.preventDefault();
     const element = document.getElementById("projects");
@@ -42,11 +29,24 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <motion.div className="banner">
-        <motion.div variants={firstName} className="oluwakemi">
-          <motion.h1 variants={letter}>Oluwakemi</motion.h1>
+      <motion.div
+        className="banner"
+      >
+        <motion.div className="oluwakemi">
+          <motion.h1
+            initial={{ x: -300, scale: 0.5 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ duration: 2 }}
+          >
+            Oluwakemi
+          </motion.h1>
         </motion.div>
-        <div className="oluwakemi-intro">
+        <motion.div
+          initial={{ x: 300, scale: 0.5 }}
+          animate={{ x: 0, scale: 1 }}
+          transition={{ duration: 2 }}
+          className="oluwakemi-intro"
+        >
           <p>
             {" "}
             Front Engineer that Poised, passionate professional, and
@@ -63,8 +63,8 @@ const Home = () => {
           <a href="/" onClick={handleClickScroll}>
             Projects
           </a>
-        </div>
-      </motion.div>
+        </motion.div>
+      </motion.div >
       <div className="projects" id="projects">
         <h1>Projects</h1>
         <ProjectOption>

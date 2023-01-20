@@ -5,12 +5,14 @@ import Sidebar from "../Sidebar";
 import { createPortal } from "react-dom";
 import { HeaderNav } from "./styles";
 
+
+
 const Header = () => {
   const [showSidebar, setShowSideBar] = useState(false);
   const variantA = {
     open: { opacity: 0, x: "-100%" },
     closed: { opacity: 1, x: 0 },
-  };
+  }
 
   const today = new Date();
   const currDate = today.toLocaleDateString("en-us", {
@@ -25,10 +27,10 @@ const Header = () => {
   };
   const handleClickScroll = () => {
     toggleSidebar();
-    const element = document.getElementById("projects");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    // const element = document.getElementById("projects");
+    // if (element) {
+    //   element.scrollIntoView({ behavior: "smooth" });
+    // }
   };
   return (
     <HeaderNav>
@@ -54,7 +56,7 @@ const Header = () => {
         </div>
         {showSidebar &&
           createPortal(
-            <Sidebar show={showSidebar} onClick={handleClickScroll} />,
+            <Sidebar show={showSidebar} onClose={handleClickScroll} />,
             document.body
           )}
       </div>

@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { SidebarWrapper } from "./styles";
 
 type Props = {
-  onClick?: React.MouseEventHandler;
+  onClose?: React.MouseEventHandler;
   show: Boolean;
 };
 
-const Sidebar = ({ onClick, show }: Props) => {
+const Sidebar = ({ onClose, show }: Props) => {
   const variantA = {
     open: { opacity: 1, y: "5%" },
     closed: { opacity: 0, y: '100%', transition: {
@@ -25,13 +25,13 @@ const Sidebar = ({ onClick, show }: Props) => {
         <div className="sides-div">
           <span className="sidebar-header">Navigation</span>
           <ul className="navigation">
-            <li onClick={onClick}>
+            <li onClick={onClose}>
               <a onClick={(e) => e.preventDefault()} href="/">
                 Projects
               </a>
             </li>
             <li>
-              <Link onClick={onClick} to="about">About</Link>
+              <Link onClick={onClose} to="about">About</Link>
             </li>
             <li>
               <a

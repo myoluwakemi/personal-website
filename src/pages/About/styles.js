@@ -6,18 +6,33 @@ export const AboutWrapper = styled(motion.div)`
   margin-top: 4rem;
   color: #fff;
   .background-profile {
-    overflow: hidden;
+   
     display: grid;
     gap: 75px;
     grid-template-columns: 2fr 1fr;
-    height: 400px;
+   
     .personal-img {
+         overflow: hidden;
+          height: 400px;
       img {
-        height: 100%;
+        height: 600px;
         width: 100%;
         object-fit: contain;
       }
     }
+  }
+  @media (max-width: 476px) {
+    padding: 4rem 1rem 0 1rem;
+  }
+  @media(max-width: 767px){
+   .background-profile{
+     grid-template-columns: 1fr;
+   }
+  }
+  @media(min-width: 768px) and (max-width: 1070px){
+     .background-profile{
+     grid-template-columns: 1fr 1fr;
+   }
   }
 `;
 export const SectionParagraph = styled(motion.p)`
