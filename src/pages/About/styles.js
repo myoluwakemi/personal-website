@@ -69,7 +69,7 @@ export const ExperienceRow = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   height: 240px;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -99,7 +99,7 @@ export const Year = styled(motion.div)`
   justify-content: center;
   width: 135px;
   height: 135px;
-  box-shadow: 0 10px 20px #c3c8d8;
+  box-shadow: 0 10px 20px rgba(255, 255,255, 0.2);
   text-align: center;
   span {
     font-weight: bolder;

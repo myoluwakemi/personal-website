@@ -1,5 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import {
   HomeWrapper,
   Line,
@@ -8,13 +9,22 @@ import {
   ProjectRowDetails,
 } from "./styles";
 
+const rowVariant = {
+  visible: { opacity: 1, y: 0, transition: { duration: 4 } },
+  hidden: { opacity: 0, y: "-100%" },
+};
+
 const Home = () => {
-  
   //  const container = document.querySelector("body") as HTMLElement;
 
-  
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-  
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
   const handleClickScroll = (e: any) => {
     e.preventDefault();
@@ -29,9 +39,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <motion.div
-        className="banner"
-      >
+      <motion.div className="banner">
         <motion.div className="oluwakemi">
           <motion.h1
             initial={{ x: -300, scale: 0.5 }}
@@ -64,11 +72,19 @@ const Home = () => {
             Projects
           </a>
         </motion.div>
-      </motion.div >
+      </motion.div>
       <div className="projects" id="projects">
         <h1>Projects</h1>
         <ProjectOption>
-          <ProjectRow>
+          <ProjectRow
+          ref={ref}
+            initial="hidden"
+           animate={controls}
+           variants={rowVariant}
+            transition={{ duration: 4 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <ProjectRowDetails>
               <span>Ecommerce platform</span>
               <span className="framework">

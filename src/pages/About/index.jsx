@@ -61,10 +61,26 @@ const About = () => {
           An Overview of my academic and professional work
         </SectionParagraph>
         <Experiences>
-          <ExperienceRow>
+          <ExperienceRow
+            initial={{ opacity: 0, x: "-100%", background: "#000" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 4 }}
+            whileHover={{
+              background: "#efefef",
+              color: "#000",
+              borderRadius: "6px",
+            }}
+          >
             <Year>
               <span>July 2022</span>
-              <div className="line"></div>
+              <motion.div
+                initial={{ background: "#fff" }}
+                whileHover={{
+                  background: "#000",
+                }}
+                transition={{ duration: 4 }}
+                className="line"
+              ></motion.div>
               <span>Oct 2022</span>
             </Year>
             <div className="other-details">
