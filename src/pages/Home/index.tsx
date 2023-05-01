@@ -85,7 +85,7 @@ const Home = () => {
           <p>
             {" "}
             Front Engineer that Poised, passionate professional, and
-            product-oriented, with 3+ years of experience working in Javascript,
+            product-oriented, with 4+ years of experience working in Javascript,
             ReactJS, VueJs, and NextJs in a variety of fast-paced, dynamic, and
             ever-changing settings.{" "}
           </p>
