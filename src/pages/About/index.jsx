@@ -12,6 +12,13 @@ import {
 
 const experiences = [
   {
+    year_from: "Feb 2023",
+    year_to: "till date",
+    company_name: "Sparkle Nigeria",
+    location: "Lagos, Nigera",
+    position: "Frontend Engineer",
+  },
+  {
     year_from: "July 2022",
     year_to: "Oct 2022",
     company_name: "SEOmonitor",
@@ -31,7 +38,8 @@ const experiences = [
     company_name: "Semicolon Africa",
     location: "Lagos, Nigera",
     position: "Software Engineer",
-  },
+  }
+  
 ];
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.5, 0.9] };
