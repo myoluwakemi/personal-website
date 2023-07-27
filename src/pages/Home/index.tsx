@@ -10,14 +10,7 @@ import {
 } from "./styles";
 
 const projects = [
-  {
-    id: 1,
-    details: "Ecommerce platform",
-    frameworks: ["React", "ContextApi", "Sass", "firebase", "i18next"],
-    year: "2022-2023",
-    url: "https://myk-ecommerce.netlify.app/",
-    urlName: "Myk - ecommerce",
-  },
+ 
   {
     id: 2,
     details: "Recruitment Platform",
