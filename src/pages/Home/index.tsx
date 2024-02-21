@@ -30,7 +30,7 @@ const projects = [
   {
     id: 3,
     details: "Forex Exchange Website",
-    frameworks: ["React", "Nextjs"],
+    frameworks: ["React", "Nextjs", 'styled-component'],
     year: "2023",
     url: "https://www.exchangepal.com",
     urlName: "ExchangePal",
