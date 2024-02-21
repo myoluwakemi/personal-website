@@ -22,8 +22,8 @@ export const HomeWrapper = styled(motion.div)`
     }
     .oluwakemi-intro {
       p {
-        font-size: 25px;
-        line-height: 48px;
+        font-size: 20px;
+        line-height: 43px;
         font-weight: 400;
         text-align: left;
       }

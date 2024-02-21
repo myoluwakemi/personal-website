@@ -10,21 +10,37 @@ import {
 } from "./styles";
 
 const projects = [
- 
-  {
-    id: 2,
-    details: "Recruitment Platform",
-    frameworks: ["Vuejs", "vuex"],
-    year: "2020-2021",
-    url: "https://enum.africa/",
-    urlName: "Enum",
+   {
+     id: 1,
+    details: "Virtual Account Dashboard",
+    frameworks: ["React", "Typescript", "Bootstrap", "ReactQuery"],
+    year: "2023-2024",
+    url: "https://virtualaccounts.sparkle.ng/",
+    urlName: "Virtual Account",
   },
   {
+     id: 2,
+    details: "Upgrage of Sparkle Website",
+    frameworks: ["React", "GraphQL", "Bootstrap", "Gatsby"],
+    year: "2023-2024",
+    url: "https://sparkle.ng/",
+    urlName: "SparkleNg",
+  },
+ 
+  {
     id: 3,
+    details: "Forex Exchange Website",
+    frameworks: ["React", "Nextjs"],
+    year: "2023",
+    url: "https://www.exchangepal.com",
+    urlName: "ExchangePal",
+  },
+  {
+    id: 4,
     details: "Academic Verification",
     frameworks: ["Vuejs", "Vuetify"],
     year: "2021",
-    url: '"https://attestapp.netlify.app/',
+    url: "https://attestapp.netlify.app/",
     urlName: "AttestNG",
   },
 ];
